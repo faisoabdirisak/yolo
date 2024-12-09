@@ -1,4 +1,4 @@
-# Yolomy Application
+# Yolo Application
 ## Author   :Faiso Abdirisak
 ### Application Description
 This is an ecommerce web app for both male and female.
