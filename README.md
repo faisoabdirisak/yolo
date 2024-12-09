@@ -49,7 +49,7 @@ If you have any question or contributions and support, please email me at [faiso
 LinkedIn - [Faiso Abdirisak](www.linkedin.com/in/faiso-abdirisak/)
 
 
-Portfolio- [Faiso](hhttps:/my-portfolio-eight-sigma-93.vercel.app/)
+Portfolio- [Faiso](https:/my-portfolio-eight-sigma-93.vercel.app/)
 # Licence
 
 Click to  [MIT License](Licence) view
