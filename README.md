@@ -32,3 +32,13 @@ Make sure that you have the following installed:
     * FontEnd:  React 
     * Database * Mongo
     * Docker containerization
+
+ ## Using Docker Compose
+ ###   Procedure.
+ * Create <code> docker-compose.yml </code> file
+ * cd into backend and add <code> Dockerfile </code> and add neccessary port(5000) for nodejs
+ * cd into front-end and add <code> Dockerfile </code> and add neccessary port(3000) for react app
+ * ensure you have installed docker compose in your system if not follow this [link](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04) for linux system.
+ * run <i><code>  sudo docker-compose build </code></i> to start building
+ * the run <i><code> sudo docker-compose up </code></i> to start application
+
