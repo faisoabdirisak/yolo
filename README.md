@@ -42,3 +42,16 @@ Make sure that you have the following installed:
  * run <i><code>  sudo docker-compose build </code></i> to start building
  * the run <i><code> sudo docker-compose up </code></i> to start application
 
+## Contact Information 
+
+If you have any question or contributions and support, please email me at [faisoabdirisak@gmail.com](faisoabdirisak@gmail.com)
+
+LinkedIn - [Faiso Abdirisak](www.linkedin.com/in/faiso-abdirisak/)
+
+
+Portfolio- [Faiso](hhttps:/my-portfolio-eight-sigma-93.vercel.app/)
+# Licence
+
+Click to  [MIT License](Licence) view
+
+ Copyright (c) 2024 | Faiso Abdirisak
