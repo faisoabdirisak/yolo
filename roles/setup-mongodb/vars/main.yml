@@ -1,0 +1,4 @@
+---
+mongo_container_name: app_mongo
+mongo_network: app-net
+mongo_volume: my-own-volume
