@@ -45,6 +45,30 @@ Make sure that you have the following installed:
  * run <i><code>  sudo docker-compose build </code></i> to start building
  * the run <i><code> sudo docker-compose up </code></i> to start application
 
+ ## How to run the app
+
+![Alt text](fa.png)
+
+* `vagrant box list ` to list the machines installed
+* `vagrant add ubuntu/jammy64` to add
+### while on the folder  run:
+* `vagrant init ubuntu/jammy64` to initialize
+* `vagrant up` to run the machine
+* `vagrant status` to check if its running
+* `vagrant ssh` to went into the virtual machine
+* to logout `exit`
+* `vagrant ssh-config` to check the configuration
+* to connect the server `ssh vagrant@127.0.0.1 -p 2222 -i the relative path of identity file`
+* solve the error by running `ssh-keygen  -R '[127.0.0.1]:2222'`
+
+* then rerun the previous command
+
+* `create host address: 127.0.0.1 ansible_port=2222`
+* create ansible.cfg
+* create ansible playbook.yaml
+### when you want to run the application
+Use `vagrant provison` command
+
 ## Contact Information 
 
 If you have any question or contributions and support, please email me at [faisoabdirisak@gmail.com](faisoabdirisak@gmail.com)
@@ -57,4 +81,4 @@ Portfolio- [Faiso](https:/my-portfolio-eight-sigma-93.vercel.app/)
 
 Click to  [MIT License](Licence) view
 
- Copyright (c) 2024 | Faiso Abdirisak
+ Copyright (c) 2025 | Faiso Abdirisak
