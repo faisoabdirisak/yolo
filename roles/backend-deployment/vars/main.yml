@@ -1,4 +1,0 @@
----
-container_name: yolo-backend
-network: app-net
-volume: my-own-volume:/app
