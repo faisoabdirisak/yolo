@@ -10,6 +10,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
+      app: backend
       component: back
   template:
     metadata:
