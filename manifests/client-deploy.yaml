@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yolo-frontend
+  namespace: yolo-app
+  labels:
+    app: yolo
+    component: front
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: front
+  template:
+    metadata:
+      labels:
+        app: yolo
+        component: front
+    spec:
+        containers:
+          - name: yolo-client
+            image: faska/yolo-client:v1.0.0
+            ports:
+              - containerPort: 5000
+            resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+            requests:
+              memory: "128Mi"
+              cpu: "250m"  
+            volumeMounts:
+              - name: my-own-volume
+                mountPath: /var/www/html
+        volumes:
+          - name: my-own-volume
+            persistentVolumeClaim:
+              claimName: my-own-volume
