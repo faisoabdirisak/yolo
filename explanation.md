@@ -237,3 +237,43 @@ This command will show the details of the service created by the above yaml file
 
 
 
+
+  ## Deploy application on Kubernetes
+  **Step 4
+
+  - [Connecting GitHub Repo with Cloud Source Repository](https://www.youtube.com/watch?v=PD83mmyAbs4&list=PLqy9xGWMJzdfwb0lRkHoXyQZr02aT8FGl&index=1&t=1s)
+
+
+  **Step 5
+  - Clone the git project repository on GKE terminal
+
+  **Step 6 
+  - Create a namaspace : ```kubectl create namespace "nameofnamespace"```
+
+  **Step 7
+  - cd to the project that you cloned.
+  - To create or update the resources defined in yaml files :  kubectl apply -f client.yaml and kubectl apply -f api.yaml
+  - This will delete the resources defined in myfile.yaml : kubectl delete -f client.yaml and kubectl delete -f api.yaml
+  - This will create service LoadBalancer for yolo.front and ClusterIP for yolo.api as per below table
+```
+
+
+
+
+## Persistent Volumes
+
+`volume.yaml` has Persistent Volume and Persistent Volume Claim resource. 
+
+  apiVersion: The version of the Kubernetes API to use. **v1**
+  kind: The type of resource being created, in this case **PersistentVolume and PersistentVolumeClaim**.
+  metadata: Metadata for the PV, including a name and labels.
+  spec: The specifications for the PV, including the storage capacity and access modes.
+
+  Update the deployment on both `api.yaml and client.yaml` that you want to associate the PV with.
+  The files have `volumeMounts and volumes`
+  
+
+
+
+************************************************************************************************************
+### To view the deployed application on Kubernetes  visit  [Yolo Web link]()
