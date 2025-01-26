@@ -189,5 +189,51 @@ To run the playbook :  `ansible-playbook playbook.yaml`
 
 
 
+# Kubernetes
+**Step1
+- Create a  free [Google cloud account](https://cloud.google.com/resources/forrester-cloud-migration-study/?utm_source=google&utm_medium=cpc&utm_campaign=FY22-Q2-emea-EM874-website-dl-app-mig-1&utm_content=ForresterMigration22-DEV_c-CRE_599021984092-ADGP_Hybrid%20%7C%20BKWS%20-%20EXA%20%7C%20Txt%20~%20GCP%20~%20General_Core%233-KWID_43700071177485181-kwd-6458750523-userloc_9076838&utm_term=KW_google%20cloud-NET_g-PLAC_&gclid=CjwKCAiAoL6eBhA3EiwAXDom5ub929JMPR0Ms0wGdk6f0hM9LOD-a3ebhVb4McvtSWbIcG6rqYk9eBoCyLMQAvD_BwE&gclsrc=aw.ds)
+
+**Step2
+- Create a Project and cluster using you Google cloud account.
+
+**Step3
+- Create a folder and name it `manifests` 
+- Create a deployment and service yaml files that will helps us define Kubernetes objects to create and manage a cluster.
+
+- In this application we have `backend.yml and client.yml`
+`backend.yml` has the deployment and service object for backend and `client.yaml` has for client.
+
+A YAML file for a Kubernetes resource typically includes the following fields:
+  **Deployment
+  - apiVersion: The version of the Kubernetes API that the resource belongs to.(app/vm1)
+  - kind: The type of resource being defined (e.g. Pod, Service, Deployment).
+  - metadata: Information about the resource, such as its name and labels.
+       
+
+
+  
+
+  - The `client.yml` file creates a Pod named `yolo-client` with a single container named `clientcontainer` that runs the `actuaryemma/frontend:1` image from docker hub and exposes port `3000`.
+
+  - The `backend.yml` file creates a Pod named `yolo-backend` with a single container named `backendcontainer` that runs the `actuaryemma/api:1` image from docker hub and exposes port `5000`.
+
+  **Service**
+`
+  
+  This above client.yml file creates a Service named `yolo-front` with the label `app: yolo` and namespace `yolo-app`.  The Service uses the selector `app: yolo` to identify the set of Pods that it should route traffic to. It has a single port named `http` with a port number of `3000` and target port of `3000`, and type `LoadBalancer` which  exposes the service to the External  network.
+
+  The backend.yml  file creates a Service named `yolo-backend` with the label `app: yolo` and namespace `yolo-app`.  The Service uses the selector `app: yolo` to identify the set of Pods that it should route traffic to. It has a single port named `http` with a port number of `5000` and target port of `3000`, and type `ClusterIP` which limits the service to the internal cluster network.
+
+
+You can use the kubectl apply command to create the service from yaml file
+
+`kubectl apply -f my-service.yaml`
+
+You can also use the kubectl get svc command to check the status of your service
+
+`kubectl get svc my-service`
+
+This command will show the details of the service created by the above yaml file.
+
 
 
