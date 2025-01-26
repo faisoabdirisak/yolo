@@ -1,6 +1,7 @@
 # Yolo Application
 ## Author   :Faiso Abdirisak
 
+### To view the deployed application on Kubernetes  visit  [Yolo Web link](http://34.168.115.65:3000/)
 
 ### Application Description
 This is an ecommerce web app for both male and female.

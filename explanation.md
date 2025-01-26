@@ -187,7 +187,7 @@ To run the playbook :  `ansible-playbook playbook.yaml`
 3). docker-compose: it installs/download the image and container of the application
 
 
-
+#  To view the deployed application on Kubernetes  visit  [Yolo Web link](http://34.168.115.65:3000/)
 
 # Kubernetes
 **Step1
@@ -271,9 +271,4 @@ This command will show the details of the service created by the above yaml file
 
   Update the deployment on both `api.yaml and client.yaml` that you want to associate the PV with.
   The files have `volumeMounts and volumes`
-  
 
-
-
-************************************************************************************************************
-### To view the deployed application on Kubernetes  visit  [Yolo Web link]()
