@@ -22,14 +22,7 @@ spec:
           - name: yolo-backend
             image: faska/yolo-backend:v1.0.0
             ports:
-              - containerPort: 5000
-            resources:
-            limits:
-              memory: "256Mi"
-              cpu: "500m"
-            requests:
-              memory: "128Mi"
-              cpu: "250m"  
+             - containerPort: 5000  
             volumeMounts:
               - name: my-own-volume
                 mountPath: /var/www/html

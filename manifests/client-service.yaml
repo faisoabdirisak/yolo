@@ -15,4 +15,4 @@ spec:
     - port: 3000
       targetPort: 3000
       protocol: TCP
-      nnodePort: 30110
+      nodePort: 30110
